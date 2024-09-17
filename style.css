@@ -1,0 +1,489 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  background-color: #111;
+  color: #fff;
+  padding: 20px 50px;
+  position: relative;
+}
+
+
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: default;
+}
+
+.searchInput::placeholder {
+  color: lightgrey;
+}
+
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItem {
+  margin-right: 50px;
+  color: lightgray;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.slider {
+  background: url(./img/patrick-tomasso-QMDap1TAu0g-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+  overflow: hidden;
+}
+
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+
+.sliderItem {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sliderBg {
+  width: 750px;
+  height: 750px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+
+.sliderImg {
+  z-index: 1;
+}
+
+.sliderPrice {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  border: 2px dotted grey;
+  z-index: 2;
+}
+.buyButton {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  border: 1px solid grey;
+  background-color: black;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.buyButton:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.buyButton:nth-child(2) {
+  right: 50%;
+}
+
+.sliderItem:nth-child(1) .sliderBg {
+  background-color: lightgreen;
+}
+.sliderItem:nth-child(2) .sliderBg {
+  background-color: dodgerblue;
+}
+.sliderItem:nth-child(3) .sliderBg {
+  background-color: white;
+}
+.sliderItem:nth-child(4) .sliderBg {
+  background-color: brown;
+}
+.sliderItem:nth-child(5) .sliderBg {
+  background-color: lightgray;
+}
+
+.sliderItem:nth-child(1) .sliderPrice {
+  color: lightgreen;
+}
+.sliderItem:nth-child(2) .sliderPrice {
+  color: dodgerblue;
+}
+.sliderItem:nth-child(3) .sliderPrice {
+  color: white;
+}
+.sliderItem:nth-child(4) .sliderPrice {
+  color: brown;
+}
+.sliderItem:nth-child(5) .sliderPrice {
+  color: lightgray;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fatureImg {
+  width: 50px;
+  height: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+.featureDescrip {
+  color: grey;
+  width: 50%;
+  height: 100px;
+}
+
+.product {
+  height: 100vh;
+  position: relative;
+  background-color: whitesmoke;
+  clip-path: polygon(0 19%, 100% 0, 100% 100%, 0% 100%);
+  padding: 50px;
+}
+
+.payment {
+  width: 500px;
+  height: 500px;
+  background-color: #fff;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 10px 50px 20px 50px;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 24px 22px 25px -5px rgba(0, 0, 0, 0.56);
+}
+
+label {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payInput {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+.payInput::placeholder {
+  color: rgb(169, 169, 169);
+}
+
+.cardIcons {
+  display: flex;
+}
+
+.cardIcon {
+  margin-right: 10px;
+}
+
+.cardInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sm {
+  width: 30%;
+}
+
+.payButton {
+  position: absolute;
+  height: 40px;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.closeBtn {
+  position: absolute;
+  background-color: grey;
+  color: #fff;
+  top: 4%;
+  right: 4%;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.payTitle {
+  font-size: 20px;
+  color: #9f9f9f;
+}
+
+.productImg {
+  width: 50%;
+}
+
+.productDetail {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.priductTitle {
+  font-size: 74px;
+  font-weight: 900;
+}
+.productDesc {
+  font-size: 24px;
+  color: grey;
+}
+
+.sizes,
+.colors {
+  display: flex;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.color:last-child {
+  background-color: darkblue;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.productButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+}
+
+.productButton:hover {
+  background-color: #fff;
+  color: black;
+}
+
+.analogNav {
+  width: 100%;
+  background-color: #111;
+  height: 50px;
+  position: relative;
+  display: none;
+}
+
+.analogNav button {
+  position: absolute;
+  right: 5%;
+  top: 0;
+  background-color: #111;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+
+.analogNav button li {
+  color: #fff;
+  transform: translateX(10px);
+}
+
+.closeBtn1 {
+  position: absolute;
+  top: 10%;
+  right: 2%;
+  display: none;
+}
+
+.closeBtn1 button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+}
+
+.nikePng {
+  background-color: #fff;
+  transform: translateY(-20px);
+  padding: 15px;
+}
+
+@media (max-width: 900px) {
+  .sliderItem img {
+    width: 400px;
+  }
+  .closeBtn1 button {
+    display: block;
+  }
+  .analogNav button {
+    display: block;
+  }
+  .sliderBg {
+    width: 600px;
+  }
+  .sliderItem:nth-child(1) .sliderPrice {
+    color: black;
+  }
+  .sliderItem:nth-child(2) .sliderPrice {
+    color: black;
+  }
+  .sliderItem:nth-child(3) .sliderPrice {
+    color: black;
+  }
+  .sliderItem:nth-child(4) .sliderPrice {
+    color: black;
+  }
+  .sliderItem:nth-child(5) .sliderPrice {
+    color: black;
+  }
+
+  .sliderTitle {
+    color: black;
+    font-size: 30px;
+    right: 19%;
+  }
+
+  .buyButton {
+    font-size: 40px;
+    right: 15%;
+  }
+
+  .product .productDetail h1 {
+    font-size: 35px;
+  }
+
+  .product .productImg {
+    transform: translateY(200px);
+  }
+
+  .product .productDesc {
+    font-size: 20px;
+  }
+
+  .product .productButton {
+    margin-top: 30px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .navTop {
+    display: none;
+  }
+
+  .analogNav {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .navBottom .menuItem {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .fatureImg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .featureTitle {
+    font-size: 15px;
+  }
+
+  .featureDescrip {
+    display: none;
+  }
+
+  .payment {
+    width: 350px;
+    height: 500px;
+  }
+}
